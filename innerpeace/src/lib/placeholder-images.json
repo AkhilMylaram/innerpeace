@@ -1,0 +1,52 @@
+{
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "Morning Meditation",
+      "imageUrl": "https://images.unsplash.com/photo-1524863479829-916d8e77f114?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdW5yaXNlJTIweW9nYXxlbnwwfHx8fDE3NjM5MDkzNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunrise yoga"
+    },
+    {
+      "id": "2",
+      "description": "Stress Relief",
+      "imageUrl": "https://images.unsplash.com/photo-1667337104810-b846d9293ed4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYWxtJTIwZm9yZXN0fGVufDB8fHx8MTc2MzkxMTE4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "calm forest"
+    },
+    {
+      "id": "3",
+      "description": "Sleep Stories",
+      "imageUrl": "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMHNreXxlbnwwfHx8fDE3NjM5MDQ3NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "night sky"
+    },
+    {
+      "id": "4",
+      "description": "Focus Music",
+      "imageUrl": "https://images.unsplash.com/photo-1700451761281-fa705b64935d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkZXNrJTIwd29ya3NwYWNlfGVufDB8fHx8MTc2MzgzNTg3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desk workspace"
+    },
+    {
+      "id": "5",
+      "description": "Mindful Walking",
+      "imageUrl": "https://images.unsplash.com/photo-1591442710240-cb2f6338b486?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwYXRoJTIwZm9yZXN0fGVufDB8fHx8MTc2MzkxMTE4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "path forest"
+    },
+    {
+      "id": "6",
+      "description": "Breathing Exercise",
+      "imageUrl": "https://images.unsplash.com/photo-1547022114-429eedf947f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZWVwJTIwYnJlYXRofGVufDB8fHx8MTc2MzkxMTE4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "deep breath"
+    },
+    {
+      "id": "7",
+      "description": "Gratitude Journal",
+      "imageUrl": "https://images.unsplash.com/photo-1578941838877-141265f3a898?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsJTIwd3JpdGluZ3xlbnwwfHx8fDE3NjM4OTA2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "journal writing"
+    },
+    {
+      "id": "8",
+      "description": "Body Scan",
+      "imageUrl": "https://images.unsplash.com/photo-1726159383885-325251277f01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZWFjZWZ1bCUyMGJlYWNofGVufDB8fHx8MTc2MzgxOTcwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "peaceful beach"
+    }
+  ]
+}
