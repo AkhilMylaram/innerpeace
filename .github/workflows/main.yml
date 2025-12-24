@@ -11,9 +11,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Change to innerpeace directory
-      run: cd innerpeace
-      
     - name: Create public directory
       run: mkdir -p public
       
@@ -21,7 +18,6 @@ jobs:
       run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u akhilmylaram --password-stdin
       
     - name: Build and push images
-      working-directory: ./innerpeace
       run: |
         TAG=$(date +%Y%m%d-%H%M%S)-${GITHUB_SHA:0:7}
         
