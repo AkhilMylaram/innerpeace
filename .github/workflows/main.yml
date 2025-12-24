@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Create public directory
-      run: mkdir -p public
+      run: mkdir -p innerpeace/public
       
     - name: Login to Docker Hub
       run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u akhilmylaram --password-stdin
@@ -22,15 +22,15 @@ jobs:
         TAG=$(date +%Y%m%d-%H%M%S)-${GITHUB_SHA:0:7}
         
         # Build and push app
-        docker build -t akhilmylaram/innerpeace-app:$TAG .
+        docker build -t akhilmylaram/innerpeace-app:$TAG ./innerpeace
         docker push akhilmylaram/innerpeace-app:$TAG
         
         # Build and push nginx
-        docker build -t akhilmylaram/innerpeace-nginx:$TAG ./docker/nginx
+        docker build -t akhilmylaram/innerpeace-nginx:$TAG ./innerpeace/docker/nginx
         docker push akhilmylaram/innerpeace-nginx:$TAG
         
         # Build and push healthcheck
-        docker build -t akhilmylaram/innerpeace-healthcheck:$TAG ./docker/healthcheck
+        docker build -t akhilmylaram/innerpeace-healthcheck:$TAG ./innerpeace/docker/healthcheck
         docker push akhilmylaram/innerpeace-healthcheck:$TAG
         
         echo "Images pushed with tag: $TAG"
