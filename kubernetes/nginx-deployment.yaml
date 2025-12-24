@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: innerpeace-nginx
-        image: akhilmylaram/innerpeace-nginx:20251224-135443-0337ea7
+        image: akhilmylaram/innerpeace-nginx:20251224-135946-a9ad685
         ports:
         - containerPort: 80
