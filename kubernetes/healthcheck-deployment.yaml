@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: innerpeace-healthcheck
-        image: akhilmylaram/innerpeace-healthcheck:20251224-121028-ee6ee9a
+        image: akhilmylaram/innerpeace-healthcheck:20251224-130053-60ed489
         ports:
         - containerPort: 8080
