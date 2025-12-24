@@ -1,6 +1,8 @@
 name: Build and Push Images
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -34,3 +36,25 @@ jobs:
         docker push akhilmylaram/innerpeace-healthcheck:$TAG
         
         echo "Images pushed with tag: $TAG"
+        echo "TAG=$TAG" >> $GITHUB_ENV
+        
+    - name: Update Kubernetes deployment files
+      run: |
+        # Update app deployment
+        sed -i "s|akhilmylaram/innerpeace-app:.*|akhilmylaram/innerpeace-app:$TAG|g" kubernetes/deployment.yaml
+        
+        # Update nginx deployment
+        sed -i "s|akhilmylaram/innerpeace-nginx:.*|akhilmylaram/innerpeace-nginx:$TAG|g" kubernetes/nginx-deployment.yaml
+        
+        # Update healthcheck deployment
+        sed -i "s|akhilmylaram/innerpeace-healthcheck:.*|akhilmylaram/innerpeace-healthcheck:$TAG|g" kubernetes/healthcheck-deployment.yaml
+        
+        echo "Updated deployment files with tag: $TAG"
+        
+    - name: Commit updated deployment files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add kubernetes/
+        git commit -m "Update deployment images to $TAG" || exit 0
+        git push
