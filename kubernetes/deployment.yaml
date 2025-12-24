@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: innerpeace-app
-        image: akhilmylaram/innerpeace-app:20251224-111501-ee010b0
+        image: akhilmylaram/innerpeace-app:20251224-121028-ee6ee9a
         ports:
         - containerPort: 3000
         env:
