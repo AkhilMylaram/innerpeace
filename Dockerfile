@@ -6,7 +6,7 @@ RUN npm ci --cache /tmp/.npm
 COPY . .
 RUN npm run build
 
-# Runtime stage - using minimal alpine
+# Runtime stage - using minimal alpine - updated 2024-12-24
 FROM node:20-alpine AS runtime
 WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs && \
