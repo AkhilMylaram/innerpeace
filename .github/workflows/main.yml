@@ -37,10 +37,6 @@ jobs:
         docker build -t akhilmylaram/innerpeace-nginx:$TAG ./docker/nginx
         docker push akhilmylaram/innerpeace-nginx:$TAG
         
-        # Build and push healthcheck
-        docker build -t akhilmylaram/innerpeace-healthcheck:$TAG ./docker/healthcheck
-        docker push akhilmylaram/innerpeace-healthcheck:$TAG
-        
         echo "Images pushed with tag: $TAG"
         echo "TAG=$TAG" >> $GITHUB_ENV
         
@@ -51,9 +47,6 @@ jobs:
         
         # Update nginx deployment
         sed -i "s|akhilmylaram/innerpeace-nginx:.*|akhilmylaram/innerpeace-nginx:$TAG|g" kubernetes/nginx-deployment.yaml
-        
-        # Update healthcheck deployment
-        sed -i "s|akhilmylaram/innerpeace-healthcheck:.*|akhilmylaram/innerpeace-healthcheck:$TAG|g" kubernetes/healthcheck-deployment.yaml
         
         echo "Updated deployment files with tag: $TAG"
         
