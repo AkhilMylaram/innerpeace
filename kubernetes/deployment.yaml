@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: innerpeace-app
+  labels:
+    app: innerpeace-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: innerpeace-app
+  template:
+    metadata:
+      labels:
+        app: innerpeace-app
+    spec:
+      containers:
+      - name: innerpeace-app
+        image: akhilmylaram/innerpeace-app:20251224-111501-ee010b0
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: PORT
+          value: "3000"
+        - name: HOSTNAME
+          value: "0.0.0.0"

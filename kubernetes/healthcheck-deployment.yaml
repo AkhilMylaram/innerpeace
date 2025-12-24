@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: innerpeace-healthcheck
+  labels:
+    app: innerpeace-healthcheck
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: innerpeace-healthcheck
+  template:
+    metadata:
+      labels:
+        app: innerpeace-healthcheck
+    spec:
+      containers:
+      - name: innerpeace-healthcheck
+        image: akhilmylaram/innerpeace-healthcheck:20251224-111501-ee010b0
+        ports:
+        - containerPort: 8080

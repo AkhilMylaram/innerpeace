@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: innerpeace-nginx
+  labels:
+    app: innerpeace-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: innerpeace-nginx
+  template:
+    metadata:
+      labels:
+        app: innerpeace-nginx
+    spec:
+      containers:
+      - name: innerpeace-nginx
+        image: akhilmylaram/innerpeace-nginx:20251224-111501-ee010b0
+        ports:
+        - containerPort: 80
